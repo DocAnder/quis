@@ -1,0 +1,5 @@
+ATIVAR O AMBIENTE WINDOWS -> streamlit_env\Scripts\activate
+ATIVAR O AMBIENTE LINUX -> source streamlit_env/bin/activate
+
+
+EXECUTAR -> streamlit run core.py

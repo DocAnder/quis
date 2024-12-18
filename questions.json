@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "categoria": "Harry Potter",
+        "pergunta": "Qual o nome das casas de Hogwarts?",
+        "1": "Lufa-lufa, Grifinoria, Sonserina, Corvinal",
+        "2": "Grifinoria, Jiglet-ji, Corvinal, Lupa-lupa",
+        "3": "Sonseria, Pocahontas, Corvinal, Lufa-lufa",
+        "4": "Berlim, Corvinal, Sonserina, Chechênia",
+        "correta": 1,
+        "dificuldade": "1"
+    },
+    {
+        "id": 2,
+        "categoria": "Harry Potter",
+        "pergunta": "Qual é o nome do autor de 'Hogwarts: Uma História'?",
+        "1": "Hermione Granger",
+        "2": "Rita Skeeter",
+        "3": "J.K. Rowling",
+        "4": "Gilderoy Lockhart",
+        "correta": 3,
+        "dificuldade": "2"
+    },
+    {
+        "id": 3,
+        "categoria": "Harry Potter",
+        "pergunta": "Qual é a posição de Harry Potter no time de quadribol de Gryffindor?",
+        "1": "Artilheiro",
+        "2": "Goleiro",
+        "3": "Apanhador",
+        "4": "Batedor",
+        "correta": 3,
+        "dificuldade": "2"
+    },
+    {
+        "id": 4,
+        "categoria": "Harry Potter",
+        "pergunta": "Quem é o diretor de Hogwarts após a morte de Dumbledore?",
+        "1": "Minerva McGonagall",
+        "2": "Severus Snape",
+        "3": "Filius Flitwick",
+        "4": "Horácio Slughorn",
+        "correta": 2,
+        "dificuldade": "3"
+    },
+    {
+        "id": 5,
+        "categoria": "Harry Potter",
+        "pergunta": "Qual é o nome da plataforma de embarque para os trens de Hogwarts?",
+        "1": "Plataforma 9¾",
+        "2": "Plataforma 10",
+        "3": "Plataforma 8",
+        "4": "Plataforma 7",
+        "correta": 1,
+        "dificuldade": "1"
+    },
+    {
+        "id": 6,
+        "categoria": "Harry Potter",
+        "pergunta": "Qual animal mágico é considerado o guardião de Hogwarts?",
+        "1": "Fênix",
+        "2": "Hipogrifo",
+        "3": "Cervo",
+        "4": "Cão de Três Cabeças",
+        "correta": 1,
+        "dificuldade": "2"
+    },
+    {
+        "id": 7,
+        "categoria": "Harry Potter",
+        "pergunta": "Quem foi o criador da Pedra Filosofal?",
+        "1": "Nicholas Flamel",
+        "2": "Salazar Slytherin",
+        "3": "Helga Hufflepuff",
+        "4": "Rowena Ravenclaw",
+        "correta": 1,
+        "dificuldade": "3"
+    },
+    {
+        "id": 8,
+        "categoria": "Harry Potter",
+        "pergunta": "Qual é o nome do inimigo mortal de Harry Potter que ele derrota no último livro?",
+        "1": "Tom Riddle",
+        "2": "Bellatrix Lestrange",
+        "3": "Lord Voldemort",
+        "4": "Lucius Malfoy",
+        "correta": 3,
+        "dificuldade": "1"
+    },
+    {
+        "id": 9,
+        "categoria": "Harry Potter",
+        "pergunta": "Qual é o nome do pai de Harry Potter?",
+        "1": "James Potter",
+        "2": "Sirius Black",
+        "3": "Remus Lupin",
+        "4": "Lily Potter",
+        "correta": 1,
+        "dificuldade": "1"
+    },
+    {
+        "id": 10,
+        "categoria": "Harry Potter",
+        "pergunta": "Quem se torna o Ministro da Magia após o fim da Segunda Guerra Bruxa?",
+        "1": "Cornelius Fudge",
+        "2": "Rufus Scrimgeour",
+        "3": "Kingsley Shacklebolt",
+        "4": "Percy Weasley",
+        "correta": 3,
+        "dificuldade": "2"
+    },
+    {
+        "id": 11,
+        "categoria": "A Torre Negra",
+        "pergunta": "Qual o nome da cidade natal de Roland?",
+        "1": "Gilead",
+        "2": "Castelo Forte",
+        "3": "Vale dos Ossos",
+        "4": "Passo Largo",
+        "correta": 1,
+        "dificuldade": "2"
+    },
+    {
+        "id": 12,
+        "categoria": "A Torre Negra",
+        "pergunta": "Quem é o pistoleiro que Roland deve proteger no início da jornada?",
+        "1": "Jake Chambers",
+        "2": "Eddie Dean",
+        "3": "Susannah Dean",
+        "4": "Roland Deschain",
+        "correta": 1,
+        "dificuldade": "2"
+    },
+    {
+        "id": 13,
+        "categoria": "A Torre Negra",
+        "pergunta": "Qual é o nome da torre que Roland busca alcançar?",
+        "1": "Torre Negra",
+        "2": "Torre Branca",
+        "3": "Torre Azul",
+        "4": "Torre de Cristal",
+        "correta": 1,
+        "dificuldade": "1"
+    },
+    {
+        "id": 14,
+        "categoria": "A Torre Negra",
+        "pergunta": "Qual é a arma que Roland usa como pistoleiro?",
+        "1": "Revolver",
+        "2": "Espada",
+        "3": "Arco e flecha",
+        "4": "Adaga",
+        "correta": 1,
+        "dificuldade": "1"
+    },
+    {
+        "id": 15,
+        "categoria": "A Torre Negra",
+        "pergunta": "Quem é o autor de 'A Torre Negra'?",
+        "1": "Stephen King",
+        "2": "George R.R. Martin",
+        "3": "J.R.R. Tolkien",
+        "4": "Clive Barker",
+        "correta": 1,
+        "dificuldade": "1"
+    },
+    {
+        "id": 16,
+        "categoria": "A Torre Negra",
+        "pergunta": "Qual personagem se torna o último pistoleiro de Gilead após a morte de Roland?",
+        "1": "Jake Chambers",
+        "2": "Cuthbert Allgood",
+        "3": "Eddie Dean",
+        "4": "Walter o Feiticeiro",
+        "correta": 2,
+        "dificuldade": "3"
+    },
+    {
+        "id": 17,
+        "categoria": "A Torre Negra",
+        "pergunta": "Qual é o nome do vilão principal, também conhecido como o Homem de Preto?",
+        "1": "Walter o Feiticeiro",
+        "2": "Randall Flagg",
+        "3": "Flagg de Gilead",
+        "4": "Cort",
+        "correta": 2,
+        "dificuldade": "2"
+    },
+    {
+        "id": 18,
+        "categoria": "A Torre Negra",
+        "pergunta": "Em qual livro da série Roland e seus companheiros enfrentam o Monstro das Sombras?",
+        "1": "A Lenda do Pistoleiro",
+        "2": "A Viagem do Peregrino",
+        "3": "A Escolha do Pistoleiro",
+        "4": "A Torre Negra",
+        "correta": 4,
+        "dificuldade": "3"
+    },
+    {
+        "id": 19,
+        "categoria": "A Torre Negra",
+        "pergunta": "Quem é a mãe de Jake Chambers?",
+        "1": "Cynthia Chambers",
+        "2": "Susannah Dean",
+        "3": "Hattie Chambers",
+        "4": "Barbara Chambers",
+        "correta": 1,
+        "dificuldade": "2"
+    },
+    {
+        "id": 20,
+        "categoria": "A Torre Negra",
+        "pergunta": "Qual é o nome do homem que Roland conhece e que ajuda a salvar Jake?",
+        "1": "Eddie Dean",
+        "2": "Roland Deschain",
+        "3": "O Caçador",
+        "4": "O Homem de Preto",
+        "correta": 3,
+        "dificuldade": "3"
+    }    
+]
