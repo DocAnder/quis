@@ -23,7 +23,7 @@ class DifficultyScoreStrategy(ScoreStrategy):
             2: 3,  # Nível 2: 3 pontos
             3: 4   # Nível 3: 4 pontos
         }
-        return difficulty_scores.get(question.difficulty, 0)
+        return difficulty_scores.get(question.get_difficulty(), 0)
 
 #Contexto
 class ScoreCalculator:
