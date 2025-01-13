@@ -23,9 +23,8 @@ if not st.session_state.quiz_started:
     # Seleção de dificuldade
     difficulty = st.radio("Dificuldade", ["1", "2", "3"], index=0)
     # Seleção do tipo de pontuação
-    score_type = st.radio("Tipo de Pontuação", ["Fixa", "Por Dificuldade"], index=0)
-    
-    # Botão para iniciar o quiz
+    score_type = st.radio("Tipo de Pontuação", ["Fixa", "Por Dificuldade"], index=0)    
+
     if st.button("Iniciar Quiz"):
         st.session_state.quiz_started = True
         questions = load_questions(category, difficulty)
@@ -37,6 +36,21 @@ if not st.session_state.quiz_started:
         st.session_state.score_calculator = ScoreCalculator.create_calculator(score_type)
             
         st.rerun()
+
+    st.write("""   
+
+    **Instruções:**
+    1. Escolha a categoria desejada e o nível de dificuldade.
+    - **Fácil (1):** Apenas questões de nível 1.
+    - **Médio (2):** Questões de nível 1 e 2.
+    - **Difícil (3):** Questões de nível 1, 2 e 3.
+    3. Tipo de pontuação:
+    - **Fixa:** Cada questão vale 2 pontos.
+    - **Por dificuldade:** (Fácil = 2 pontos / Média = 3 pontos / Difícil = 4 pontos)
+
+    Boa sorte e divirta-se! 🎉
+    """)
+
 
 if st.session_state.quiz_started:
     questions = st.session_state.questions
