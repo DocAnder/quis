@@ -7,7 +7,22 @@ class Question:
         self.options = options
         self.correct_answer = correct_answer
         self.difficulty = difficulty
-        self.id = id
+        self.id = id    
+
+    def get_category(self):
+        return self.category
+
+    def get_question(self):
+        return self.question
+
+    def get_options(self):
+        return self.options
+
+    def get_correct_answer(self):
+        return self.correct_answer
+
+    def get_difficulty(self):
+        return self.difficulty
 
     def __repr__(self):
         return f"<Question(category={self.category}, question={self.question}, difficulty={self.difficulty})>"
