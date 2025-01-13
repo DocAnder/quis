@@ -31,8 +31,9 @@ class QuestionFactory:
 
     @staticmethod
     def create_filtered_questions(data_list: List[dict], category: str, difficulty: str) -> List[Question]:
+        max_difficulty = int(difficulty)  # Calcula o nível máximo permitido com base na dificuldade selecionada
         filtered_data = [
             q for q in data_list 
-            if q['categoria'] == category and q['dificuldade'] == difficulty
+            if q['categoria'] == category and int(q['dificuldade']) <= max_difficulty
         ]
         return QuestionFactory.create_questions(filtered_data)
