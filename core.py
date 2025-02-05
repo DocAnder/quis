@@ -4,55 +4,60 @@ from strategy import ScoreCalculator
 import streamlit as st
 from typing import List
 from question_decorator import BonusQuestion
+from observer import Subject, QuizEventNotifier  # Importando o Observer
 import random
+import time
 
+#OBSERVER
+# Criação do Subject (Observável) para gerenciar eventos do quiz
+quiz_subject = Subject()
+
+# Adicionando um Observador para notificar eventos
+quiz_notifier = QuizEventNotifier()
+quiz_subject.attach(quiz_notifier)
 
 def load_questions(category, difficulty):
-    # Singleton 
+    # SINGLETON 
     loader = QuestionsLoader() 
     questions_data = loader.load_questions()
-
-    # Factory
+    # FACTORY
     questions = QuestionFactory.create_filtered_questions(questions_data, category, difficulty)
-
-    # Decorator
+    # DECORATOR
     bonus_count = 1 if len(questions) == 4 else 2
     bonus_questions = random.sample(questions, bonus_count)
     for idx, question in enumerate(questions):
         if question in bonus_questions:            
             questions[idx] = BonusQuestion(question, bonus_points=2)    
-
     return questions
-
 
 # Página de seleção de categoria e dificuldade
 if "quiz_started" not in st.session_state:
     st.session_state.quiz_started = False
-
 if not st.session_state.quiz_started:
     st.header("Selecione a Categoria e a Dificuldade")
-
     # Seleção de categoria
     category = st.selectbox("Categoria", ["Harry Potter", "A Torre Negra"], index=0)
     # Seleção de dificuldade
     difficulty = st.radio("Dificuldade", ["1", "2", "3"], index=0)
     # Seleção do tipo de pontuação
     score_type = st.radio("Tipo de Pontuação", ["Fixa", "Por Dificuldade"], index=0)    
-
     if st.button("Iniciar Quiz"):
         st.session_state.quiz_started = True
         questions = load_questions(category, difficulty)
         st.session_state.questions = questions
         st.session_state.current_question = 0
         st.session_state.score = 0
-        
-        # Strategy
+
+        # STRATEGY
         st.session_state.score_calculator = ScoreCalculator.create_calculator(score_type)
-            
+
+        # Notificando o início do quiz
+        quiz_subject.notify("O quiz começou! Boa sorte!")
+        time.sleep(2)  # Aguarda 2 segundos para o usuário ver a notificação
+
         st.rerun()
-
+        
     st.write("""   
-
     **Instruções:**
     1. Escolha a categoria desejada e o nível de dificuldade.
     - **Fácil (1):** Apenas questões de nível 1.
@@ -61,15 +66,12 @@ if not st.session_state.quiz_started:
     3. Tipo de pontuação:
     - **Fixa:** Cada questão vale 2 pontos.
     - **Por dificuldade:** (Fácil = 2 pontos / Média = 3 pontos / Difícil = 4 pontos)
-
     Boa sorte e divirta-se! 🎉
     """)
-
 
 if st.session_state.quiz_started:
     questions = st.session_state.questions
     current_index = st.session_state.current_question
-
     if current_index < len(questions):
         question = questions[current_index]
         st.header(f"Questão {current_index + 1} de {len(questions)}")
@@ -100,6 +102,9 @@ if st.session_state.quiz_started:
                         points += question.bonus_points
                         st.session_state.bonus_correct += question.bonus_points
                         st.write(f"**Bônus!** Você ganhou mais {question.bonus_points} pontos!")
+                        # Notificando que uma questão bônus foi respondida corretamente
+                        quiz_subject.notify(f"Você respondeu uma questão bônus corretamente! +{question.bonus_points} pontos.")
+                        time.sleep(2)  # Aguarda 2 segundos para o usuário ver a notificação
                     
                     st.session_state.score += points
                     st.write(f"Você ganhou {points} pontos!")
@@ -136,6 +141,8 @@ if st.session_state.quiz_started:
         st.write(f"Sua pontuação final foi: **{st.session_state.score}**")
         st.write(f"Pontuação máxima (sem pontos bônus): **{max_possible_score}**")
         st.write(f"Pontos de bônus acumulados: **{st.session_state.bonus_correct}**")
+        # Notificando o fim do quiz
+        quiz_subject.notify("O quiz terminou! Veja sua pontuação final!!")
         if st.button("Reiniciar"):
             st.session_state.quiz_started = False
             # Limpa todas as variáveis de controle de resposta
@@ -143,4 +150,3 @@ if st.session_state.quiz_started:
                 if key.startswith("answered_") or key in {"bonus_correct"}:
                     del st.session_state[key]
             st.rerun()
-
