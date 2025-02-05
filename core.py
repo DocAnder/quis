@@ -134,7 +134,7 @@ if st.session_state.quiz_started:
             [True] * len(questions)
         )
         st.write(f"Sua pontuação final foi: **{st.session_state.score}**")
-        st.write(f"Pontuação máxima possível: **{max_possible_score}**")
+        st.write(f"Pontuação máxima (sem pontos bônus): **{max_possible_score}**")
         st.write(f"Pontos de bônus acumulados: **{st.session_state.bonus_correct}**")
         if st.button("Reiniciar"):
             st.session_state.quiz_started = False
